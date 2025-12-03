@@ -8,6 +8,7 @@ public class LinkedList<T> {
         size = 0;
     }
 
+  
     public void add(T data) {
         Node<T> nuevo = new Node<>(data);
 
@@ -23,6 +24,7 @@ public class LinkedList<T> {
         size++;
     }
 
+    
     public T get(int index) {
         if (index < 0 || index >= size)
             throw new IndexOutOfBoundsException("Indice fuera de rango");
@@ -34,6 +36,7 @@ public class LinkedList<T> {
         return aux.data;
     }
 
+   
     public boolean contains(T data) {
         Node<T> aux = head;
         while (aux != null) {
@@ -65,10 +68,12 @@ public class LinkedList<T> {
         return false;
     }
 
+ 
     public void clear() {
         head = null;
         size = 0;
     }
+
 
     public boolean isEmpty() {
         return size == 0;
@@ -78,28 +83,12 @@ public class LinkedList<T> {
         return size;
     }
 
+
     public void print() {
         Node<T> aux = head;
         while (aux != null) {
             System.out.println(aux.data);
             aux = aux.next;
         }
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("[");
-
-        Node<T> aux = head;
-
-        while (aux != null) {
-            sb.append(aux.data);
-            if (aux.next != null) sb.append(", ");
-            aux = aux.next;
-        }
-
-        sb.append("]");
-        return sb.toString();
     }
 }

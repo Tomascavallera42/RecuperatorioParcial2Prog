@@ -31,21 +31,4 @@ public class Stack<T> {
     public boolean isEmpty() {
         return size == 0;
     }
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("[TOP -> ");
-
-        Node<T> aux = top;
-
-        while (aux != null) {
-            sb.append(aux.data);
-            if (aux.next != null) sb.append(", ");
-            aux = aux.next;
-        }
-
-        sb.append("]");
-        return sb.toString();
-    }
 }

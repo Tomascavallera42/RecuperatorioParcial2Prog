@@ -42,21 +42,4 @@ public class Queue<T> {
     public boolean isEmpty() {
         return size == 0;
     }
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("[FRONT -> ");
-
-        Node<T> aux = front;
-
-        while (aux != null) {
-            sb.append(aux.data);
-            if (aux.next != null) sb.append(", ");
-            aux = aux.next;
-        }
-
-        sb.append(" <- REAR]");
-        return sb.toString();
-    }
 }
